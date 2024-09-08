@@ -1,0 +1,24 @@
+{
+  "name": "ilmark",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.25.6",
+    "@milkdown/core": "^7.5.0",
+    "@milkdown/crepe": "^7.5.6",
+    "@milkdown/preset-commonmark": "^7.5.0",
+    "@milkdown/theme-nord": "^7.5.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "marked": "^14.1.1",
+    "tailwindcss": "^3.4.10"
+  }
+}
