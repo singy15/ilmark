@@ -1,107 +1,8 @@
-/*
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-*/
-
 html,body {
   width: 100%;
   height: 100%;
   padding: 0;
-  margin: 0;
+  margin: auto;
   background-color: #889;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -112,6 +13,9 @@ html,body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  height: 297mm;
+  width: 210mm;
 }
 
 .button1 {
@@ -147,13 +51,17 @@ input[type="file"]:hover {
   opacity:1.0;
 }
 
-#editorContainer {
-  overflow: auto;
-  position: fixed;
-  top: 40px;
-  bottom: 40px;
-  left: 30px;
-  right: 30px;
+@page {
+  margin: 0;
+  size: A4 portrait;
+}
+
+.page {
+  box-sizing: border-box;
+  height: 297mm;
+  width: 210mm;
+  margin: 0;
+  padding: 0;
 }
 
 .milkdown .editor {
@@ -191,20 +99,20 @@ input[type="file"]:hover {
 }
 
 /*
-  & h1 { font-size: 3em; counter-reset: h2; }
-  & h2 { font-size: 2em; counter-reset: h3; }
-  & h3 { font-size: 1.75em; counter-reset: h4; }
-  & h4 { font-size: 1.5em; counter-reset: h5; }
-  & h5 { font-size: 1.25em; counter-reset: h6; }
+& h1 { font-size: 3em; counter-reset: h2; }
+& h2 { font-size: 2em; counter-reset: h3; }
+& h3 { font-size: 1.75em; counter-reset: h4; }
+& h4 { font-size: 1.5em; counter-reset: h5; }
+& h5 { font-size: 1.25em; counter-reset: h6; }
 
-  & h1::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; content:''; }
-  & h2::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h2; content:counter(h2) " "; }
-  & h3::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h3; content:counter(h2) "." counter(h3) " "; }
-  & h4::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h4; content:counter(h2) "." counter(h3) "." counter(h4) " "; }
-  & h5::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h5; content:counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "; }
+& h1::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; content:''; }
+& h2::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h2; content:counter(h2) " "; }
+& h3::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h3; content:counter(h2) "." counter(h3) " "; }
+& h4::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h4; content:counter(h2) "." counter(h3) "." counter(h4) " "; }
+& h5::before { display:inline-block; margin-left:0px; transform: scale(1.0,1.0); color: #AAA; font-size: 0.7em; counter-increment: h5; content:counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "; }
  * */
 
-/*
+  /*
   & h1 { font-size: 3em; }
   & h2 { font-size: 2em; }
   & h3 { font-size: 1.75em; }
@@ -217,4 +125,4 @@ input[type="file"]:hover {
   & h3::before { display:inline-block; letter-spacing: 0.25em; margin-left:-10px; transform: scale(0.6,1.0); color: #AA9; font-size: 0.7em; font-family: cursive; content:'###' }
   & h4::before { display:inline-block; letter-spacing: 0.25em; margin-left:-10px; transform: scale(0.6,1.0); color: #AA9; font-size: 0.7em; font-family: cursive; content:'####' }
   & h5::before { display:inline-block; letter-spacing: 0.25em; margin-left:-10px; transform: scale(0.6,1.0); color: #AA9; font-size: 0.7em; font-family: cursive; content:'#####' }
-*/
+   */

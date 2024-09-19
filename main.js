@@ -68,34 +68,34 @@ This is example doc.
 `);
 
 document.getElementById('fileInput').addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const content = e.target.result;
-          createCrepe(content);
-        };
-        reader.readAsText(file);
-    }
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const content = e.target.result;
+      createCrepe(content);
+    };
+    reader.readAsText(file);
+  }
 });
 
 document.getElementById('saveButton').addEventListener('click', () => {
-    const content = cr.getMarkdown();
-    const blob = new Blob([content], { type: 'text/markdown' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'document.md';
-    link.click();
+  const content = cr.getMarkdown();
+  const blob = new Blob([content], { type: 'text/markdown' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'document.md';
+  link.click();
 });
 
 document.getElementById('saveButton2').addEventListener('click', () => {
-    const content = cr.getMarkdown();
-    const html = marked.parse(content);
-    const blob = new Blob([html], { type: 'text/html' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'document.html';
-    link.click();
+  const content = cr.getMarkdown();
+  const html = marked.parse(content);
+  const blob = new Blob([html], { type: 'text/html' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'document.html';
+  link.click();
   console.log(html);
 });
 
