@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ilmark</title>
-  </head>
-  <body>
-    <div id="editor" class="page" spellcheck="false"></div>
-
+    <title>Milkdown Markdown Editor</title>
+    <link rel="stylesheet" href="https://unpkg.com/milkdown@latest/dist/style.css">
+</head>
+<body>
+      <div id="editor" class="page" style="margin:auto;" spellcheck="false"></div>
+    <!-- <script src="https://unpkg.com/milkdown@latest/dist/milkdown.js"></script> -->
     <div style="position:fixed; top:5px; left:10px;">
-      <button id="saveButton" class="button1">Save</button>
-      <button id="saveButton2" class="button1">Html</button>
+      <button id="saveButton" class="button1"  >Save</button>
+      <button id="saveButton2" class="button1"  >Html</button>
       <input type="file" id="fileInput"/>
     </div>
     <script type="module" src="main.js"></script>
-  </body>
+</body>
 </html>
