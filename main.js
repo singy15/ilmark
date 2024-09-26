@@ -52,6 +52,7 @@ async function saveFile(contents, handle = null) {
           },
         ],
       });
+      globalFSHandle = handle;
     }
     await writeFile(handle, contents);
     return handle;
@@ -264,13 +265,23 @@ document.getElementById('fileInput').addEventListener('change', (event) => {
     }
 });
 
+document.getElementById('openButton').addEventListener('click', (event) => {
+  let contents = openFile().then(data => {
+    console.log(data.text);
+    const content = data.text;
+    createCrepe(content);
+  });
+});
+
 document.getElementById('saveButton').addEventListener('click', () => {
-    const content = cr.getMarkdown();
-    const blob = new Blob([content], { type: 'text/markdown' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'document.md';
-    link.click();
+    // const content = cr.getMarkdown();
+    // const blob = new Blob([content], { type: 'text/markdown' });
+    // const link = document.createElement('a');
+    // link.href = URL.createObjectURL(blob);
+    // link.download = 'document.md';
+    // link.click();
+
+  saveFile(cr.getMarkdown(), globalFSHandle);
 });
 
 document.getElementById('saveButton2').addEventListener('click', () => {
